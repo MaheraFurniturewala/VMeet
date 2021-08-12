@@ -1,0 +1,26 @@
+{
+  "name": "vmeet",
+  "version": "1.0.0",
+  "description": "A video chat application",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MaheraFurniturewala/VMeet.git"
+  },
+  "keywords": [
+    "video",
+    "chat"
+  ],
+  "author": "Mahera Furniturewala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MaheraFurniturewala/VMeet/issues"
+  },
+  "homepage": "https://github.com/MaheraFurniturewala/VMeet#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
