@@ -17,4 +17,17 @@ app.get('/:room',(req,res)=>{
     res.render('room',{roomId:req.params.room});
 })
 
+io.on('connection',(socket)=>{
+    socket.on('join-room',(roomId, userId)=>{
+        //we are joining this new room with roomId with the current user
+        socket.join(roomId);
+        //send a message to the room that we are currently in
+        socket.broadcast.to(roomId).emit('user-connected',userId);
+        socket.on('disconnect',()=>{
+            socket.broadcast.to(roomId).emit('user-disconnected',userId);
+        });
+        
+    });
+})
+
 server.listen(8000);
